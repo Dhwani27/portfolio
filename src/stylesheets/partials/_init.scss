@@ -1,0 +1,36 @@
+
+.into{
+&__container
+{
+    @include viewport__center;
+}
+&__message{
+  font-family: $base-fonts;
+  font-size: 2rem;
+}
+}  
+.smily{
+    @include text__center;
+}
+.size{
+  width: 65px;
+  height: 65px;
+}
+
+
+#left-eye, #right-eye{
+  animation: blink 2.4s infinite;
+}
+
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(50px) scaleY(0)
+  }
+  100% {
+    animation-timing-function: ease-out;
+  }
+}
